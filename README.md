@@ -1,8 +1,8 @@
 # tifiles
 
-![crates.io](https://img.shields.io/crates/v/tifiles)
-![docs.rs](https://img.shields.io/docsrs/tifiles)
-![crate license](https://img.shields.io/crates/l/tifiles)
+[![crates.io](https://img.shields.io/crates/v/tifiles)](https://crates.io/crates/tifiles)
+[![docs.rs](https://img.shields.io/docsrs/tifiles)](https://docs.rs/tifiles/)
+[![crate license](https://img.shields.io/crates/l/tifiles)](LICENSE)
 
 This is a Rust library for manipulating file formats used with Texas
 Instruments graphing calculators, primarily (for now?) those used with
