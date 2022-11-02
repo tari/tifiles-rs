@@ -1,0 +1,19 @@
+[package]
+name = "tifiles"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["Peter Marheine <peter@taricorp.net>"]
+description = "Tools for manipulating file formats used with TI graphing calculators"
+documentation = "https://docs.rs/tifiles/"
+repository = "https://gitlab.com/taricorp/tifiles-rs"
+
+readme = "README.md"
+license = "BSD-2-Clause"
+
+keywords = ["ticalc"]
+categories = ["encoding", "parser-implementations"]
+
+[dependencies]
+num_enum = "0.5.7"
+thiserror = "1.0.30"
