@@ -9,6 +9,8 @@
 //! for details on file formats.
 use num_enum::TryFromPrimitive;
 
+#[cfg(feature = "bundles")]
+pub mod bundle;
 pub mod read;
 pub mod write;
 
@@ -56,6 +58,27 @@ impl VariableType {
             | TableSetup | AppVar => true,
             Real | List | Matrix | Complex | ComplexList => false,
             x => unimplemented!("Format for variable type {:?} is unknown", x),
+        }
+    }
+
+    /// Return the customary file extension associated with a file of a given variable type.
+    pub fn file_extension(&self) -> &'static str {
+        use VariableType::*;
+        match self {
+            Real => "8xn",
+            Complex => "8xc",
+            List | ComplexList => "8xl",
+            Matrix => "8xm",
+            Equation => "8xy",
+            String => "8xs",
+            Program | ProtectedProgram => "8xp",
+            Picture => "8xi",
+            GDB => "8xd",
+            Zoom => "8xz",
+            TableSetup => "8xt",
+            AppVar => "8xv",
+            Group => "8xg",
+            t => todo!("File extension for type {:?} isn't yet known", t),
         }
     }
 }
